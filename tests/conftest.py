@@ -14,7 +14,7 @@ driver = None
 
 
 def pytest_addoption(parser):
-    """Add CLI options for browser, environment, and country selection."""
+    """Add CLI options for browser selection."""
     parser.addoption("--browser_name", action="store", default="chrome", help="Browser: chrome, firefox, edge")
 
 
