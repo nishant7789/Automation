@@ -58,3 +58,17 @@
 2025-04-21 17:12:55,297 :INFO : logout_test.py : test_logout :Logged out successfully
 2025-04-21 17:12:56,104 :INFO : logout_test.py : test_invalid_login :admi
 2025-04-21 17:12:57,676 :INFO : logout_test.py : test_invalid_login :Invalid credentials
+2025-04-24 22:10:39,145 :INFO : logout_test.py : test_logout :Logged out successfully
+2025-04-24 22:11:33,273 :INFO : logout_test.py : test_logout :Logged out successfully
+2025-04-24 22:16:34,984 :INFO : logout_test.py : test_logout :Logged out successfully
+2025-04-24 22:16:35,908 :INFO : logout_test.py : test_invalid_login :admi
+2025-04-24 22:16:37,743 :INFO : logout_test.py : test_invalid_login :Invalid credentials
+2025-04-28 13:58:24,196 :INFO : logout_test.py : test_logout :Logged out successfully
+2025-04-28 13:58:25,024 :INFO : logout_test.py : test_invalid_login :admi
+2025-04-28 13:58:26,817 :INFO : logout_test.py : test_invalid_login :Invalid credentials
+2025-04-29 23:01:53,182 :INFO : logout_test.py : test_logout :Logged out successfully
+2025-05-01 15:08:59,509 :INFO : logout_test.py : test_logout :Logged out successfully
+2025-05-01 15:10:33,612 :INFO : logout_test.py : test_logout :Logged out successfully
+2025-05-01 15:15:31,698 :INFO : logout_test.py : test_logout :Logged out successfully
+2025-05-01 15:16:14,692 :INFO : logout_test.py : test_logout :Logged out successfully
+2025-05-01 15:17:37,261 :INFO : logout_test.py : test_logout :Logged out successfully
