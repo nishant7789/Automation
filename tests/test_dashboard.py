@@ -13,7 +13,7 @@ from pageobjects.dashboard_page import DashboardPage
 logger = BaseClass()
 log = logger.getLogger()
 # Load config.json
-CONFIG_PATH = "D://Seleniumx//testdata//data.json"
+CONFIG_PATH = "D://Seleniumx//testdata//search_data.json"
 
 with open(CONFIG_PATH, "r") as config_file:
     config = json.load(config_file)
@@ -23,7 +23,7 @@ class TestDashboard(BaseClass):
 
     def test_search(self):
         dashboard_page = DashboardPage(self.driver)
-        dashboard_page.search("Leave")
+        dashboard_page.search(config["search_query"])
         result = WebDriverWait(self.driver, config["timeout"]).until(
             EC.presence_of_element_located(dashboard_page.result))
         print("Search result text:", result.text)
