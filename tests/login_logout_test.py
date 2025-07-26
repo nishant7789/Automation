@@ -14,15 +14,16 @@ from pageobjects.loginpage import LoginPage
 logger = BaseClass()
 log = logger.getLogger()
 # Load config.json
-CONFIG_PATH = "D:\\Seleniumx\\testdata\\data.json"
+CONFIG_PATH = "D://Seleniumx//testdata//data.json"
 
 with open(CONFIG_PATH, "r") as config_file:
     config = json.load(config_file)
 
 
-class TestLogin(BaseClass):
+class TestLogin_logout(BaseClass):
 
     def test_logout(self):
+        log.info("Test case 1: Verify if user is able to log out.")
         self.driver.find_element(By.XPATH, '//*[@id="app"]/div[1]/div[1]/header/div[1]/div[3]/ul/li/span/i').click()
         WebDriverWait(self.driver, config["timeout"]).until(
             EC.presence_of_element_located((By.XPATH, '//a[text()="Logout"]'))).click()
@@ -30,7 +31,7 @@ class TestLogin(BaseClass):
         loginpage.get_login_text()
         assert loginpage.get_login_text().is_displayed()
         log.info("Logged out successfully")
-    @pytest.mark.skip(reason="deliberately skipping")
+    # @pytest.mark.skip(reason="deliberately skipping")
     def test_invalid_login(self):
         self.driver.get(config["base_url"])
         login_page = LoginPage(self.driver)
@@ -42,20 +43,10 @@ class TestLogin(BaseClass):
         login_page.get_password_field().send_keys(config["invalid_password"])
         login_page.get_submit_btn().click()
         invalid_credentials_message = login_page.get_error_message_invalid_credentials().text
-        log.info(invalid_credentials_message)
+        log.info("The Validation message after wrong Password :{}".format(invalid_credentials_message))
         assert "Invalid" in invalid_credentials_message
 
-    import pytest
 
-    def signin(self,username, password):
-        # Simulated backend login check
-        return username == "admin" and password == "secret"
 
-    @pytest.mark.parametrize("username,password,expected", [
-        ("admin", "secret", True),
-        ("admin", "wrong", False),
-        ("user", "secret", False),
-    ])
-    def test_login(self,username, password, expected):
-        assert self.signin(username, password) == expected
+
 

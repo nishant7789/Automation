@@ -1,0 +1,1 @@
+[32mINFO    [0m <module>:login_logout_test.py:42 admi

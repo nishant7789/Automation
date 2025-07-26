@@ -38,7 +38,6 @@ def pytest_runtest_makereport(item, call):
 
 
 def _capture_screenshot(name):
-
     driver.get_screenshot_as_file(name)
 
 
@@ -60,7 +59,7 @@ def setup(request):
     elif browser_name == "edge":
         driver = webdriver.Edge()
 
-    driver.implicitly_wait(5)
+    driver.implicitly_wait(0.3)
     driver.get(config["base_url"])
     driver.maximize_window()
     request.cls.driver = driver
@@ -68,7 +67,7 @@ def setup(request):
     driver.quit()
 
 
-CONFIG_PATH = "D:\\Seleniumx\\testdata\\data.json"
+CONFIG_PATH = "D://Seleniumx//testdata//data.json"
 
 with open(CONFIG_PATH, "r") as config_file:
     config = json.load(config_file)

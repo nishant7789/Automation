@@ -1,0 +1,2 @@
+[32mINFO    [0m <module>:login_logout_test.py:42 admi
+[32mINFO    [0m <module>:login_logout_test.py:46 The Validation message after wrong Password :Invalid credentials

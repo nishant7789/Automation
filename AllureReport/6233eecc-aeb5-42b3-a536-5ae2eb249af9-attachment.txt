@@ -1,0 +1,2 @@
+[32mINFO    [0m <module>:login_logout_test.py:26 Test case 1: Verify if user is able to log out.
+[32mINFO    [0m <module>:login_logout_test.py:33 Logged out successfully
